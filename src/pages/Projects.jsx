@@ -2,21 +2,21 @@ const projects = [
   {
     title: "React Personal Portfolio",
     tag: "React · Vite",
-    image: "/project1.png",
+    image: `${import.meta.env.BASE_URL}project1.png`,
     desc: "Designed and developed a responsive multi-page portfolio using reusable React components and React Router. My role included page structure, navigation, styling, and deployment preparation.",
     outcome: "A clean portfolio that presents my education, projects, services, and contact information."
   },
   {
     title: "Java Dice Game",
     tag: "Java · OOP",
-    image: "/project2.png",
+    image: `${import.meta.env.BASE_URL}project2.png`,
     desc: "Built a console-based four-dice game with random dice rolls, win/loss rules, and a goal-number mechanic. I implemented the program logic, tested outcomes, and managed the code with GitHub.",
     outcome: "A working Java program that applies conditionals, loops, methods, and random values."
   },
   {
     title: "Interactive React Forms",
     tag: "React · JavaScript",
-    image: "/project3.png",
+    image: `${import.meta.env.BASE_URL}project3.png`,
     desc: "Created controlled inputs, dropdowns, checkboxes, validation, and multi-field form components while practicing React state management and event handling.",
     outcome: "Reusable form components that validate and capture user input."
   }

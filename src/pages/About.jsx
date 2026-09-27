@@ -5,7 +5,7 @@ export default function About() {
 
       <div className="two-col">
         <img
-          src="/profile.jpg"
+          src={`${import.meta.env.BASE_URL}profile.jpg`}
           alt="Sunhum Park"
           className="profile-photo"
         />
@@ -29,7 +29,7 @@ export default function About() {
 
           <a
             className="button"
-            href="/Sunhum-Park-Resume.pdf"
+            href={`${import.meta.env.BASE_URL}Sunhum-Park-Resume.pdf`}
             target="_blank"
             rel="noreferrer"
           >
