@@ -1,0 +1,7 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+export default function Contact(){
+ const navigate=useNavigate(); const [form,setForm]=useState({firstName:'',lastName:'',phone:'',email:'',message:''});
+ const change=e=>setForm({...form,[e.target.name]:e.target.value});
+ const submit=e=>{e.preventDefault(); console.log('Captured contact form:',form); alert(`Thanks, ${form.firstName}! Your information was captured.`); navigate('/');};
+ return <section className="page"><h1>Contact Me</h1><div className="contact-grid"><aside className="contact-panel"><h2>Let's connect</h2><p><strong>Name</strong><br/>Sunhum Park</p><p><strong>Location</strong><br/>Toronto, Ontario, Canada</p><p><strong>Email</strong><br/>adv9011@gmail.com</p><p className="note"></p></aside><form onSubmit={submit}><div className="form-row"><label>First Name<input required name="firstName" value={form.firstName} onChange={change}/></label><label>Last Name<input required name="lastName" value={form.lastName} onChange={change}/></label></div><label>Contact Number<input name="phone" value={form.phone} onChange={change}/></label><label>Email Address<input required type="email" name="email" value={form.email} onChange={change}/></label><label>Message<textarea required rows="5" name="message" value={form.message} onChange={change}/></label><button className="button" type="submit">Send Message</button></form></div></section>}
